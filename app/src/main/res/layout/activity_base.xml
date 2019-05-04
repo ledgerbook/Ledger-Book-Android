@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/base_coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <include
+            android:id="@+id/app_toolbar"
+            layout="@layout/toolbar_main"
+            />
+
+        <View
+            android:id="@+id/toolbar_divider"
+            style="@style/divider_horizontal"
+            />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <FrameLayout
+                android:id="@+id/activity_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+            <RelativeLayout
+                android:id="@+id/container_progress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white_85"
+                android:visibility="gone"
+                tools:visibility="visible"
+                >
+
+                <TextView
+                    android:id="@+id/txtActivityProgress"
+                    style="@style/BodyText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/view_big_vertical_margin"
+                    android:gravity="center_horizontal"
+                    tools:text="Verifying"
+                    />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/txtActivityProgress"
+                    android:layout_centerHorizontal="true"
+                    >
+
+                    <ProgressBar
+                        android:id="@+id/activity_progressbar"
+                        style="?android:attr/progressBarStyleLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                </FrameLayout>
+            </RelativeLayout>
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:src="@android:drawable/ic_menu_edit"
+        android:visibility="gone"
+        app:elevation="6dp"
+        app:pressedTranslationZ="12dp"
+        />
+
+</android.support.design.widget.CoordinatorLayout>

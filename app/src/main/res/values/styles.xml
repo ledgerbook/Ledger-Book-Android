@@ -1,0 +1,89 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <style name="divider_horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/divider_color</item>
+    </style>
+
+    <style name="CustomToolbar">
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.ActionBar</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+    </style>
+
+    <style name="BodyBigTitle">
+        <item name="typeface">roboto_light</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/black_70</item>
+    </style>
+
+    <style name="BoldBodyBigTitle" parent="BodyBigTitle">
+        <item name="typeface">roboto_medium</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="BodyText">
+        <item name="typeface">roboto_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="BodyTextTitle" parent="BodyText">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="BodyInstruction">
+        <item name="typeface">roboto_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/textColorInstructions</item>
+    </style>
+
+    <style name="BodyInstruction2" parent="BodyInstruction">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="BodyInstructionDark" parent="BodyInstruction">
+        <item name="android:textColor">@color/textColorInstructionsDark</item>
+    </style>
+
+    <style name="BoldTitle">
+        <item name="typeface">roboto_medium</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="IbData">
+        <item name="typeface">roboto_regular</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ScreenTitle">
+        <item name="typeface">roboto_regular</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+
+    <style name="Button" parent="Base.Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@drawable/selector_btn</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="typeface">roboto_medium</item>
+        <item name="android:enabled">true</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+</resources>

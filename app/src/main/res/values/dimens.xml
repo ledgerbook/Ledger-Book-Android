@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="toolbar_text_size">16sp</dimen>
+    <dimen name="toolbar_icon_size">32dp</dimen>
+    <dimen name="view_bottom_margin_window">30dp</dimen>
+    <dimen name="btn_radius">4dp</dimen>
+    <dimen name="view_default_vertical_margin">10dp</dimen>
+    <dimen name="view_big_vertical_margin">20dp</dimen>
+    <dimen name="view_small_vertical_margin">8dp</dimen>
+    <dimen name="button_drawable_padding">5dp</dimen>
+    <dimen name="input_text_bottom_padding">25dp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="steps_indicator_circle_diameter">20dp</dimen>
+    <dimen name="dashboard_card_top_padding">@dimen/view_big_vertical_margin</dimen>
+    <dimen name="view_bigger_vertical_margin">30dp</dimen>
+    <dimen name="view_small_vertical_margin5">5dp</dimen>
+    <dimen name="font_drawable_default_size">12dp</dimen>
+    <dimen name="edit_text_left_padding">4dp</dimen>
+    <dimen name="menu_item_border_size">1dp</dimen>
+    <dimen name="horizontal_divider_height">1dp</dimen>
+    <dimen name="activity_big_horizontal_margin">24dp</dimen>
+</resources>
