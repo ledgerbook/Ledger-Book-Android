@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <com.android.ledgerbook.ui.widgets.CustomTextView
+        android:id="@+id/txtIbTitle"
+        style="@style/BoldTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/title_color"
+        tools:text="Full Name (Owner)"
+        />
+
+    <FrameLayout
+        android:id="@+id/containerIbData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        />
+
+    <com.android.ledgerbook.ui.widgets.CustomTextView
+        android:id="@+id/txtIbError"
+        style="@style/BodyText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/error"
+        tools:text="Please enter correct phone number"
+        android:visibility="gone"
+        />
+
+</LinearLayout>

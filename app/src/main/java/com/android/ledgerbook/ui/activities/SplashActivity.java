@@ -25,6 +25,5 @@ public class SplashActivity extends BaseActivity implements
     @Override
     public void onAppInitiated() {
         User user = User.getInstance();
-
     }
 }

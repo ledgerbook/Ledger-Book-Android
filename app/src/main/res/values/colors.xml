@@ -32,7 +32,7 @@
     <color name="periwinkle">#898ffd</color>
     <color name="white_five">#f8f8f8</color>
     <color name="white_five_75">#bff8f8f8</color>
-    <color name="dark_grey">#575553</color>
+    <color name="dark_grey">#545454</color>
     <color name="green_blue_two">#00d195</color>
     <color name="green_blue_two_5">#0c00d195</color>
     <color name="cornflower">#565ef3</color>
@@ -53,4 +53,5 @@
     <color name="textColorInstructionsDark">@color/dark_grey</color>
     <color name="divider_color">#33979797</color>
     <color name="hint_text_color">#808080</color>
+    <color name="title_color">#717171</color>
 </resources>

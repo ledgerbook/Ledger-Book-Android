@@ -7,4 +7,22 @@
     <string name="retry">Retry</string>
     <string name="please_wait">Please wait…</string>
     <string name="something_went_wrong">Something went wrong</string>
+    <string name="create_my_payment_payment_book">Create my Payment Book</string>
+    <string name="setup_your_payment_book">Setup your Payment Book</string>
+    <string name="fill_up_the_basic_details">Fill up the basic details of your business/office to setup your payment book</string>
+    <string name="this_field_cannot_be_blank">This field cannot be blank</string>
+    <string name="otp_cannot_be_empty">Otp cannot be empty</string>
+    <string name="otp_is_invalid">OTP is invalid</string>
+    <string name="rupee_symbol">\u20B9&#160;</string>
+    <string name="add_mobile_number">Add mobile number</string>
+    <string name="mobile_number_of_incorrect_size">Mobile number of incorrect size</string>
+    <string name="incorrect_number">Incorrect number</string>
+    <string name="enter_amount">Enter an amount</string>
+    <string name="amount_zero">Amount should be greater than 0</string>
+    <string name="amount_invalid">Invalid amount</string>
+    <string name="rupee_symbol_amount">\u20B9&#160;%1$s</string>
+
+    <string name="full_name">Full Name (Owner)</string>
+    <string name="business_name">Business Name</string>
+    <string name="email_address">Email Address (optional)</string>
 </resources>
