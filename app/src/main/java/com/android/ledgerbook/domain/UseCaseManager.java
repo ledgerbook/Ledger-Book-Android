@@ -1,5 +1,7 @@
 package com.android.ledgerbook.domain;
 
+import com.android.ledgerbook.models.CreateBookRequest;
+import com.android.ledgerbook.models.CreateBookResponse;
 import com.android.ledgerbook.models.User;
 import com.android.ledgerbook.storage.RepositoriesManager;
 
@@ -18,12 +20,16 @@ public class UseCaseManager {
         useCaseScheduler.execute(handler);
     }
 
+    public void logout() {
+        repositoriesManager.logout();
+        User.resetInstance();
+    }
+
     public UseCaseHandler<User> initApp() {
         return new SingleRequestResponseHandler<>(repositoriesManager::getUser);
     }
 
-    public void logout() {
-        repositoriesManager.logout();
-        User.resetInstance();
+    public UseCaseHandler<CreateBookResponse> createBook(CreateBookRequest request) {
+        return new SingleRequestResponseHandler<>(request, repositoriesManager::createBook);
     }
 }

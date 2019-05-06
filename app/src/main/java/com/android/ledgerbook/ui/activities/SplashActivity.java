@@ -18,7 +18,7 @@ public class SplashActivity extends BaseActivity implements
         Fragment fragment = getContainerFragment();
         if (fragment == null) {
             fragment = new SplashFragment();
-            replaceFragment(fragment);
+            replaceContainerFragment(fragment);
         }
     }
 

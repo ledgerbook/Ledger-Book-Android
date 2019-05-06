@@ -10,6 +10,7 @@ public interface Validator {
     int OTP = 2;
     int POSTAL_CODE = 3;
     int AMOUNT = 4;
+    int EMAIL = 5;
 
     String runValidation(View view);
 }

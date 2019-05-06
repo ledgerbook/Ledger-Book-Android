@@ -156,6 +156,10 @@ public class CustomTextInput extends TextInputEditText implements Validatable {
                             prefix.length() ? refinedString : "");
                     setText(strWithPrefix);
                     Selection.setSelection(getText(), getText().length());
+                } else if (validatorType == Validator.EMAIL) {
+                    if (s.length() > 0 && s.toString().charAt(0) == '+') {
+                        s.delete(0, 1);
+                    }
                 }
             }
         }
@@ -197,6 +201,19 @@ public class CustomTextInput extends TextInputEditText implements Validatable {
                         return context.getString(R.string.mobile_number_of_incorrect_size);
                     } else if (!phonePattern.matcher(phoneNumber).matches()) {
                         return context.getString(R.string.incorrect_number);
+                    } else {
+                        return Validator.NO_ERROR;
+                    }
+                };
+                break;
+            case Validator.EMAIL:
+                validator = view -> {
+                    String email = ((TextView) view).getText().toString();
+                    Context context = view.getContext();
+                    if (TextUtils.isEmpty(email)) {
+                        return context.getString(R.string.add_email);
+                    } else if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                        return context.getString(R.string.invalid_email);
                     } else {
                         return Validator.NO_ERROR;
                     }

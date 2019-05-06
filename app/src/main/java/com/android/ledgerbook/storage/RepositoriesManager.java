@@ -4,6 +4,8 @@ import android.content.Context;
 
 import com.android.ledgerbook.domain.CustomDataException;
 import com.android.ledgerbook.domain.UseCaseHandler;
+import com.android.ledgerbook.models.CreateBookRequest;
+import com.android.ledgerbook.models.CreateBookResponse;
 import com.android.ledgerbook.models.CustomError;
 import com.android.ledgerbook.models.User;
 import com.android.ledgerbook.storage.local.LocalDataRepository;
@@ -120,5 +122,10 @@ public class RepositoriesManager {
 
     public User getUser(UseCaseHandler handler) throws CustomDataException {
         return executeCall(handler, null, remoteDataRepository.getUser());
+    }
+
+    public CreateBookResponse createBook(UseCaseHandler handler, CreateBookRequest request)
+            throws CustomDataException {
+        return executeCall(handler, null, remoteDataRepository.createBook(request));
     }
 }

@@ -100,8 +100,26 @@
                     style="@style/IbData"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:validatorType="mandatory"
+                    app:validatorType="email"
                     tool:text="rohits@gmail.com"
+                    />
+
+            </com.android.ledgerbook.ui.widgets.CustomInputBox>
+
+            <com.android.ledgerbook.ui.widgets.CustomInputBox
+                android:id="@+id/ibBusinessAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/view_big_vertical_margin"
+                app:IbTitle="@string/business_address"
+                >
+
+                <com.android.ledgerbook.ui.widgets.CustomTextInput
+                    style="@style/IbData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:validatorType="email"
+                    tool:text="Nahar Amrit Shakti"
                     />
 
             </com.android.ledgerbook.ui.widgets.CustomInputBox>

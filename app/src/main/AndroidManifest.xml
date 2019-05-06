@@ -25,6 +25,11 @@
             android:name=".ui.activities.LoginActivity"
             android:screenOrientation="portrait"
             />
+
+        <activity
+            android:name=".ui.activities.CreateBookActivity"
+            android:screenOrientation="portrait"
+            />
     </application>
 
 </manifest>

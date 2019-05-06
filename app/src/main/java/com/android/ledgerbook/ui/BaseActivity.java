@@ -174,7 +174,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         return getSupportFragmentManager().findFragmentById(R.id.activity_container);
     }
 
-    protected void replaceFragment(Fragment fragment) {
+    protected void replaceContainerFragment(Fragment fragment) {
         getSupportFragmentManager().beginTransaction().replace(R.id.activity_container, fragment)
                 .commit();
     }
