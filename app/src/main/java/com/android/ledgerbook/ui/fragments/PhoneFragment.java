@@ -40,17 +40,21 @@ public class PhoneFragment extends BaseFragment<PhoneFragment.PhoneActionListene
 
     @OnClick(R.id.btnPhoneEntered)
     void onClick(View view) {
-        OtpRequest request = new OtpRequest(edtPhone.getPrefixLessText());
+        OtpRequest request = new OtpRequest(getPhoneNumber());
         registerExecuteUseCaseWithActivityProgress(getUseCaseManager().sendOtp(request),
                 this::onOtpSent, null);
     }
 
+    private String getPhoneNumber() {
+        return edtPhone.getPrefixLessText();
+    }
+
     @ApiSuccess
     private void onOtpSent(GenericResponse response) {
-        fragmentActionListener.onOtpSent();
+        fragmentActionListener.onOtpSent(getPhoneNumber());
     }
 
     public interface PhoneActionListener {
-        void onOtpSent();
+        void onOtpSent(String phone);
     }
 }

@@ -3,6 +3,7 @@ package com.android.ledgerbook.storage.remote;
 import com.android.ledgerbook.models.CreateBookRequest;
 import com.android.ledgerbook.models.CreateBookResponse;
 import com.android.ledgerbook.models.GenericResponse;
+import com.android.ledgerbook.models.LoginRequest;
 import com.android.ledgerbook.models.OtpRequest;
 import com.android.ledgerbook.models.User;
 
@@ -15,9 +16,12 @@ public interface RemoteDataRepository {
     @GET("/users/profile")
     Call<User> getUser();
 
-    @POST("/users/")
+    @POST("/users/otp")
     Call<GenericResponse> sendOtp(@Body OtpRequest request);
 
     @POST("/books")
     Call<CreateBookResponse> createBook(@Body CreateBookRequest request);
+
+    @POST("/users")
+    Call<User> login(@Body LoginRequest request);
 }

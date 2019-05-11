@@ -35,4 +35,6 @@
     <string name="phone_prefix">+91</string>
     <string name="enter_mobile_number">Enter mobile number</string>
     <string name="enter_your_mobile_number_to_get_started">Enter your mobile number to get started</string>
+    <string name="auto_verify_otp">Please wait while we auto verify the OTP sent to %1$s</string>
+    <string name="verify">Verify</string>
 </resources>

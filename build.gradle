@@ -36,4 +36,5 @@ ext {
     persistentCookieJarVersion = "v1.0.1"
     okhttp3DownloaderVersion = "1.1.0"
     constraintLayoutVersion = '1.1.2'
+    otpViewVersion = '2.0.3'
 }

@@ -15,6 +15,9 @@ public class User extends BaseResponse implements Saveable, Parcelable {
     @SerializedName("id")
     private int id;
 
+    @SerializedName("business")
+    private Business business;
+
     public static User getInstance() {
         if (instance == null) {
             instance = new User();
@@ -28,6 +31,14 @@ public class User extends BaseResponse implements Saveable, Parcelable {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public Business getBusiness() {
+        return business;
+    }
+
+    public void setBusiness(Business business) {
+        this.business = business;
     }
 
     public static void resetInstance() {
@@ -45,6 +56,9 @@ public class User extends BaseResponse implements Saveable, Parcelable {
     }
 
 
+    public User() {
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -52,12 +66,13 @@ public class User extends BaseResponse implements Saveable, Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-    }
-
-    public User() {
+        dest.writeInt(this.id);
+        dest.writeParcelable(this.business, flags);
     }
 
     protected User(Parcel in) {
+        this.id = in.readInt();
+        this.business = in.readParcelable(Business.class.getClassLoader());
     }
 
     public static final Creator<User> CREATOR = new Creator<User>() {

@@ -29,7 +29,8 @@ public class PhoneActivity extends BaseActivity implements PhoneFragment.PhoneAc
     }
 
     @Override
-    public void onOtpSent() {
-
+    public void onOtpSent(String phone) {
+        OtpActivity.startActivity(this, phone);
+        finish();
     }
 }

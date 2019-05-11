@@ -1,7 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
+
+    <com.android.ledgerbook.ui.widgets.CustomTextView
+        android:id="@+id/txtTitle"
+        style="@style/BodyBigTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_big_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_big_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_big_horizontal_margin"
+        android:layout_marginBottom="@dimen/view_bigger_vertical_margin"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/auto_verify_otp"
+        />
+
+    <com.mukesh.OtpView
+        android:id="@+id/viewOtp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/view_bigger_vertical_margin"
+        android:inputType="number"
+        android:textColor="@color/textColor"
+        android:textSize="24sp"
+        app:cursorVisible="false"
+        app:itemCount="4"
+        app:itemSpacing="12dp"
+        app:layout_constraintStart_toStartOf="@id/txtTitle"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle"
+        app:lineColor="@color/colorPrimary"
+        app:lineWidth="3dp"
+        app:typeface="roboto_medium"
+        app:viewType="line"
+        tools:text="1245"
+        />
+
+    <com.android.ledgerbook.ui.widgets.CustomButton
+        android:id="@+id/btnVerifyPhone"
+        style="@style/Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text="@string/verify"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
 
 </android.support.constraint.ConstraintLayout>

@@ -104,6 +104,7 @@ dependencies {
     implementation('com.crashlytics.sdk.android:answers:1.4.1') { transitive = true; }
     implementation('com.crashlytics.sdk.android:crashlytics:2.9.1@aar') { transitive = true; }
     implementation "com.jakewharton.picasso:picasso2-okhttp3-downloader:$rootProject.okhttp3DownloaderVersion"
+    implementation "com.github.mukeshsolanki:android-otpview-pinview:$rootProject.otpViewVersion"
 
     annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.butterknifeVersion"
     testImplementation 'junit:junit:4.12'

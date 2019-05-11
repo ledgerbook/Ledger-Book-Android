@@ -22,7 +22,7 @@ public class CreateBookActivity extends BaseActivity implements CreateBookFragme
         }
     }
 
-    public void startActivity(Context startingContext) {
+    public static void startActivity(Context startingContext) {
         Intent intent = new Intent(startingContext.getApplicationContext(), CreateBookActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startingContext.startActivity(intent);
