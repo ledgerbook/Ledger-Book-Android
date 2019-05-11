@@ -15,7 +15,7 @@ import com.android.ledgerbook.models.BaseResponse;
 import com.android.ledgerbook.models.CustomError;
 import com.android.ledgerbook.models.RetryCallEvent;
 import com.android.ledgerbook.models.User;
-import com.android.ledgerbook.ui.activities.LoginActivity;
+import com.android.ledgerbook.ui.activities.PhoneActivity;
 import com.android.ledgerbook.utils.Constants;
 import com.android.ledgerbook.utils.ConsumerFunc;
 
@@ -227,9 +227,9 @@ public abstract class BaseFragment<T> extends Fragment {
                         break;
                     case Constants.ERROR_UNAUTHORIZED:
                         Activity activity = getActivity();
-                        if (!(activity instanceof LoginActivity) && User.getInstance().getId() != 0) {
+                        if (!(activity instanceof PhoneActivity) && User.getInstance().getId() != 0) {
                             getUseCaseManager().logout();
-                            LoginActivity.startActivityForUnauthorizedUser(BaseFragment.this.getContext());
+                            PhoneActivity.startActivity(BaseFragment.this.getContext());
                         }
                         break;
                     default:

@@ -255,7 +255,7 @@ public class CustomTextInput extends TextInputEditText implements Validatable {
                 return s.subSequence(prefix.length(), s.length()).toString();
             }
         }
-        return s.toString();
+        return s.toString().trim();
     }
 
     private void addValidatorTypePrefix() {

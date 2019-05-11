@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.android.ledgerbook.ui.widgets.CustomTextView
+        android:id="@+id/txtTitle"
+        style="@style/BodyBigTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/view_bigger_vertical_margin"
+        android:text="@string/enter_your_mobile_number_to_get_started"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@id/viewPhoneNumber"
+        app:layout_constraintEnd_toEndOf="@id/viewPhoneNumber"
+        app:layout_constraintStart_toStartOf="@id/viewPhoneNumber"
+        />
+
+    <include
+        android:id="@+id/viewPhoneNumber"
+        layout="@layout/view_phone_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_big_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_big_horizontal_margin"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toTopOf="@id/btnPhoneEntered"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+    <com.android.ledgerbook.ui.widgets.CustomButton
+        android:id="@+id/btnPhoneEntered"
+        style="@style/Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text="@string/next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+</android.support.constraint.ConstraintLayout>

@@ -4,12 +4,12 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 
-import com.android.ledgerbook.models.User;
 import com.android.ledgerbook.ui.BaseActivity;
-import com.android.ledgerbook.ui.fragments.SplashFragment;
+import com.android.ledgerbook.ui.fragments.LanguageSelectionFragment;
+import com.android.ledgerbook.utils.LocaleUtils;
 
-public class SplashActivity extends BaseActivity implements
-        SplashFragment.SplashActionListener {
+public class LanguageSelectionActivity extends BaseActivity implements
+        LanguageSelectionFragment.LanguageSelectionActionListener {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -17,13 +17,13 @@ public class SplashActivity extends BaseActivity implements
         hideActionBar();
         Fragment fragment = getContainerFragment();
         if (fragment == null) {
-            fragment = new SplashFragment();
+            fragment = new LanguageSelectionFragment();
             setContainerFragment(fragment);
         }
     }
 
     @Override
-    public void onAppInitiated() {
-        User user = User.getInstance();
+    public void onLanguageSelected(String language) {
+        LocaleUtils.saveNewLanguage(this, language);
     }
 }

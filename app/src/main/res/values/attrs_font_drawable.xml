@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="fontDrawable">
+        <enum name="ic_cross" value="100"/>
+        <enum name="ic_arrow_left" value="101"/>
+        <enum name="ic_tick" value="102"/>
+        <enum name="ic_radio_button_checked" value="103"/>
+        <enum name="ic_radio_button_unchecked" value="104"/>
+        <enum name="ic_location" value="105"/>
+        <enum name="ic_contacts" value="106"/>
+        <enum name="ic_folder" value="107"/>
+        <enum name="ic_sms" value="108"/>
+        <enum name="ic_phone" value="109"/>
+        <enum name="ic_time" value="110"/>
+        <enum name="ic_user" value="111"/>
+        <enum name="ic_edit" value="112"/>
+        <enum name="ic_check" value="113"/>
+        <enum name="ic_info" value="114"/>
+        <enum name="ic_warn" value="115"/>
+        <enum name="ic_email" value="116"/>
+        <enum name="ic_secure" value="117"/>
+        <enum name="ic_circle_up" value="118"/>
+        <enum name="ic_down" value="119"/>
+        <enum name="ic_download" value="120"/>
+
+        <enum name="ic_alert" value="200"/>
+        <enum name="ic_photo" value="202"/>
+        <enum name="ic_camera" value="203"/>
+        <enum name="ic_calendar" value="205"/>
+        <enum name="ic_arrow_drop_down" value="206"/>
+        <enum name="ic_magnify" value="207"/>
+        <enum name="ic_arrow_up" value="208"/>
+        <enum name="ic_reload" value="209"/>
+        <enum name="ic_bank" value="210"/>
+        <enum name="ic_magnify_2" value="211"/>
+        <enum name="ic_right" value="212"/>
+        <enum name="ic_tick_thick" value="213"/>
+        <enum name="ic_info_fill" value="214"/>
+        <enum name="ic_delete" value="215"/>
+        <enum name="ic_cross_circle" value="216"/>
+        <enum name="ic_add" value="217"/>
+        <enum name="ic_repeat" value="218"/>
+        <enum name="ic_search" value="219"/>
+    </attr>
+</resources>

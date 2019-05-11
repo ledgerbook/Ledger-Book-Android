@@ -7,6 +7,8 @@ import com.android.ledgerbook.domain.UseCaseHandler;
 import com.android.ledgerbook.models.CreateBookRequest;
 import com.android.ledgerbook.models.CreateBookResponse;
 import com.android.ledgerbook.models.CustomError;
+import com.android.ledgerbook.models.GenericResponse;
+import com.android.ledgerbook.models.OtpRequest;
 import com.android.ledgerbook.models.User;
 import com.android.ledgerbook.storage.local.LocalDataRepository;
 import com.android.ledgerbook.storage.remote.RemoteDataRepository;
@@ -127,5 +129,9 @@ public class RepositoriesManager {
     public CreateBookResponse createBook(UseCaseHandler handler, CreateBookRequest request)
             throws CustomDataException {
         return executeCall(handler, null, remoteDataRepository.createBook(request));
+    }
+
+    public GenericResponse sendOtp(UseCaseHandler handler, OtpRequest request) throws CustomDataException {
+        return executeCall(handler, null, remoteDataRepository.sendOtp(request));
     }
 }

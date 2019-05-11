@@ -29,4 +29,10 @@
         <attr name="IbTitle" format="string"/>
     </declare-styleable>
 
+    <declare-styleable name="fontDrawableView">
+        <attr name="fontDrawable"/>
+        <attr name="fontDrawableColor"/>
+        <attr name="fontDrawableSize"/>
+    </declare-styleable>
+
 </resources>

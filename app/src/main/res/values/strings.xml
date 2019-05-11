@@ -28,4 +28,11 @@
     <string name="business_name">Business Name</string>
     <string name="email_address">Email Address (optional)</string>
     <string name="business_address">Business Address</string>
+    <string name="choose_a_language">Choose a language</string>
+    <string name="language_english">English</string>
+    <string name="language_hindi">हिन्दी</string>
+    <string name="next">Next</string>
+    <string name="phone_prefix">+91</string>
+    <string name="enter_mobile_number">Enter mobile number</string>
+    <string name="enter_your_mobile_number_to_get_started">Enter your mobile number to get started</string>
 </resources>

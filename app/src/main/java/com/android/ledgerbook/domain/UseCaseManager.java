@@ -2,6 +2,8 @@ package com.android.ledgerbook.domain;
 
 import com.android.ledgerbook.models.CreateBookRequest;
 import com.android.ledgerbook.models.CreateBookResponse;
+import com.android.ledgerbook.models.GenericResponse;
+import com.android.ledgerbook.models.OtpRequest;
 import com.android.ledgerbook.models.User;
 import com.android.ledgerbook.storage.RepositoriesManager;
 
@@ -31,5 +33,9 @@ public class UseCaseManager {
 
     public UseCaseHandler<CreateBookResponse> createBook(CreateBookRequest request) {
         return new SingleRequestResponseHandler<>(request, repositoriesManager::createBook);
+    }
+
+    public UseCaseHandler<GenericResponse> sendOtp(OtpRequest request) {
+        return new SingleRequestResponseHandler<>(request, repositoriesManager::sendOtp);
     }
 }

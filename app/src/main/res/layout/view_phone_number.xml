@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    >
+
+    <com.android.ledgerbook.ui.widgets.CustomTextView
+        android:id="@+id/txtPhonePrefix"
+        style="@style/BodyBigTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="@string/phone_prefix"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/edtPhone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <com.android.ledgerbook.ui.widgets.CustomTextInput
+        android:id="@+id/edtPhone"
+        style="@style/IbData"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/view_default_vertical_margin"
+        android:hint="@string/enter_mobile_number"
+        android:paddingBottom="@dimen/view_medium_vertical_margin"
+        android:textColor="@color/textColor"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txtPhonePrefix"
+        app:layout_constraintTop_toTopOf="parent"
+        app:validatorType="phone"
+        />
+
+</android.support.constraint.ConstraintLayout>

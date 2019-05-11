@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_big_horizontal_margin"
+    >
+
+    <com.android.ledgerbook.ui.widgets.CustomTextView
+        android:id="@+id/txtTitle"
+        style="@style/BodyBigTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_a_language"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="@dimen/activity_big_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_big_horizontal_margin"
+        />
+
+    <com.android.ledgerbook.ui.widgets.CustomTextView
+        android:id="@+id/txtEnglish"
+        style="@style/BodyText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:includeFontPadding="false"
+        android:text="@string/language_english"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@id/imgTickEnglish"
+        app:layout_constraintStart_toStartOf="@id/txtTitle"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle"
+        />
+
+    <com.android.ledgerbook.ui.widgets.CustomImageView
+        android:id="@+id/imgTickEnglish"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:visibility="gone"
+        app:fontDrawable="ic_tick"
+        app:fontDrawableColor="@color/green_blue"
+        app:fontDrawableSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/txtEnglish"
+        app:layout_constraintEnd_toEndOf="@id/txtTitle"
+        app:layout_constraintTop_toTopOf="@id/txtEnglish"
+        tools:visibility="visible"
+        />
+
+    <View
+        android:id="@+id/viewDivider"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="@dimen/view_big_vertical_margin"
+        android:background="@color/divider_color"
+        app:layout_constraintEnd_toEndOf="@id/txtTitle"
+        app:layout_constraintStart_toStartOf="@id/txtTitle"
+        app:layout_constraintTop_toBottomOf="@id/txtEnglish"
+        />
+
+    <com.android.ledgerbook.ui.widgets.CustomTextView
+        android:id="@+id/txtHindi"
+        style="@style/BodyText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/view_big_vertical_margin"
+        android:includeFontPadding="false"
+        android:text="@string/language_hindi"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@id/imgTickHindi"
+        app:layout_constraintStart_toStartOf="@id/txtTitle"
+        app:layout_constraintTop_toBottomOf="@id/viewDivider"
+        />
+
+    <com.android.ledgerbook.ui.widgets.CustomImageView
+        android:id="@+id/imgTickHindi"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:visibility="gone"
+        app:fontDrawable="ic_tick"
+        app:fontDrawableColor="@color/green_blue"
+        app:fontDrawableSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/txtHindi"
+        app:layout_constraintEnd_toEndOf="@id/txtTitle"
+        app:layout_constraintTop_toTopOf="@id/txtHindi"
+        tools:visibility="visible"
+        />
+
+    <com.android.ledgerbook.ui.widgets.CustomButton
+        android:id="@+id/btnSelectLanguage"
+        style="@style/Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:enabled="false"
+        />
+
+</android.support.constraint.ConstraintLayout>

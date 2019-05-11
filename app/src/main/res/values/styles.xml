@@ -26,7 +26,7 @@
     <style name="BodyBigTitle">
         <item name="typeface">roboto_light</item>
         <item name="android:textSize">20sp</item>
-        <item name="android:textColor">@color/black_70</item>
+        <item name="android:textColor">@color/textColor</item>
     </style>
 
     <style name="BoldBodyBigTitle" parent="BodyBigTitle">

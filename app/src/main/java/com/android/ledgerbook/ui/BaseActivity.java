@@ -1,6 +1,7 @@
 package com.android.ledgerbook.ui;
 
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.CoordinatorLayout;
@@ -16,15 +17,18 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.android.ledgerbook.App;
+import com.android.ledgerbook.BuildConfig;
 import com.android.ledgerbook.R;
 import com.android.ledgerbook.domain.UseCaseManager;
 import com.android.ledgerbook.models.RetryCallEvent;
 import com.android.ledgerbook.utils.StateSaver;
+import com.android.ledgerbook.utils.iconify.IconDrawable;
 
 import org.greenrobot.eventbus.EventBus;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public abstract class BaseActivity extends AppCompatActivity {
 
@@ -67,17 +71,10 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
     }
 
-    protected void hideActionBarDivider() {
-        if (viewToolbarDivider != null) {
-            viewToolbarDivider.setVisibility(View.GONE);
-        }
-    }
-
     protected void hideActionBar() {
         if (toolbar != null) {
             toolbar.setVisibility(View.GONE);
         }
-        hideActionBarDivider();
     }
 
     protected void showActionBar() {
@@ -135,6 +132,39 @@ public abstract class BaseActivity extends AppCompatActivity {
         return null;
     }
 
+    protected void setHomeAsUp() {
+        if (imgToolbarHomeIcon != null) {
+            IconDrawable icBack = new IconDrawable(this,
+                    BuildConfig.IC_ARROW_LEFT).sizeDp(15).colorRes(R.color.colorPrimary);
+            imgToolbarHomeIcon.setImageDrawable(icBack);
+        }
+    }
+
+    protected void setHomeAsClose() {
+        if (imgToolbarHomeIcon != null) {
+            IconDrawable icClose = new IconDrawable(this, BuildConfig.IC_CROSS).
+                    sizeDp(15).color(R.color.colorPrimary);
+            imgToolbarHomeIcon.setImageDrawable(icClose);
+        }
+    }
+
+    @OnClick(R.id.imgHomeAction)
+    public void onHomeIconClick(ImageView view) {
+        Drawable iconDrawable = view.getDrawable();
+        if (iconDrawable instanceof IconDrawable) {
+            char icon = ((IconDrawable) iconDrawable).getIcon();
+            if (icon == BuildConfig.IC_ARROW_LEFT) {
+                onBackPressed();
+            } else if (icon == BuildConfig.IC_CROSS) {
+                onCancelClick();
+            }
+        }
+    }
+
+    protected void onCancelClick() {
+        onBackPressed();
+    }
+
     public UseCaseManager getUseCaseManager() {
         return ((App) getApplicationContext()).getUseCaseManager();
     }
@@ -174,7 +204,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         return getSupportFragmentManager().findFragmentById(R.id.activity_container);
     }
 
-    protected void replaceContainerFragment(Fragment fragment) {
+    protected void setContainerFragment(Fragment fragment) {
         getSupportFragmentManager().beginTransaction().replace(R.id.activity_container, fragment)
                 .commit();
     }

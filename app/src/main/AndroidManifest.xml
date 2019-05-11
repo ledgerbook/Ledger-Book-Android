@@ -22,12 +22,22 @@
         </activity>
 
         <activity
-            android:name=".ui.activities.LoginActivity"
+            android:name=".ui.activities.OtpActivity"
             android:screenOrientation="portrait"
             />
 
         <activity
             android:name=".ui.activities.CreateBookActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".ui.activities.LanguageSelectionActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".ui.activities.PhoneActivity"
             android:screenOrientation="portrait"
             />
     </application>
