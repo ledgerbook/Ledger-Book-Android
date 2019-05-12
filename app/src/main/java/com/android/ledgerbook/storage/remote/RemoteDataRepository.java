@@ -13,7 +13,7 @@ import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 public interface RemoteDataRepository {
-    @GET("/users/profile")
+    @GET("users/me")
     Call<User> getUser();
 
     @POST("/users/otp")

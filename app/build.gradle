@@ -42,12 +42,12 @@ android {
     }
     buildTypes {
         debug {
-            buildConfigField "String", "BASE_URL", '"http://core.paysense.io"'
+            buildConfigField "String", "BASE_URL", '"http://13.233.164.11:8000"'
             resValue 'string', 'APP_NAME', '"LedgerBook-Debug"'
             applicationIdSuffix '.debug'
         }
         release {
-            buildConfigField "String", "BASE_URL", '"https://api.gopaysense.com"'
+            buildConfigField "String", "BASE_URL", '"http://13.233.164.11:8000"'
             resValue 'string', 'APP_NAME', '"Ledger-Book"'
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'

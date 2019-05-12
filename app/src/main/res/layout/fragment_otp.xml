@@ -31,7 +31,6 @@
         android:inputType="number"
         android:textColor="@color/textColor"
         android:textSize="24sp"
-        app:cursorVisible="false"
         app:itemCount="4"
         app:itemSpacing="12dp"
         app:layout_constraintStart_toStartOf="@id/txtTitle"

@@ -200,6 +200,10 @@ public abstract class BaseActivity extends AppCompatActivity {
         return R.layout.activity_base;
     }
 
+    protected App getApp() {
+        return (App) getApplicationContext();
+    }
+
     protected Fragment getContainerFragment() {
         return getSupportFragmentManager().findFragmentById(R.id.activity_container);
     }
